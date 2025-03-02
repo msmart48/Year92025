@@ -68,8 +68,12 @@ function removeLastProduct() {
 }
 
 function search(type) {
-    var foundItems = products.filter(product => product.type === type);
-    console.log(foundItems);
-    //create buttons for the found list by passing to create buttons function
-    createButtons(foundItems);
+    if (type == "all") {
+        createButtons(products)
+    } else {
+        var foundItems = products.filter(product => product.type === type);
+        console.log(foundItems);
+        //create buttons for the found list by passing to create buttons function
+        createButtons(foundItems);
+    }
 }
