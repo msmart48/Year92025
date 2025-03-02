@@ -1,0 +1,35 @@
+.productBtn{
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    padding: 20px;
+    gap: 20px;
+}
+
+.left-column {
+    width: 60%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.right-column {
+    width: 40%;
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+.cartBox{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
