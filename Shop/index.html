@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shop Example</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">Welcome to the Shop</h1>
+            <!-- cart -->
+            <div class="notification is-info">
+                <h2 class="subtitle">Your Cart</h2>
+                <div id="cartOutput"></div>
+            </div>
+            <!-- search input -->
+            <input class="input" type="text" id="productSearch"
+                placeholder="Search product name" />
+            <button class="button is-success"
+                onclick="searchProducts()">Search</button>
+            <hr>
+            <!-- output the products here -->
+            <div id="productListOutput"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
