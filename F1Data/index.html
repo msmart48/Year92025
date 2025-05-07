@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>F1 Data</title>
+    </head>
+    <body>
+        <h1>F1 Data</h1>
+        <p>Welcome to the F1 data page. Here you can find various statistics and
+            information about Formula 1.</p>
+        <select id="season">
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+        </select>
+        <select id="round">
+            <option value="1">Round 1</option>
+            <option value="2">Round 2</option>
+            <option value="3">Round 3</option>
+            <option value="4">Round 4</option>
+            <option value="5">Round 5</option>
+            <option value="6">Round 6</option>
+        </select>
+        <button onclick="fetchData()">Fetch Data</button>
+        <div id="data-container"></div>
+        <script src="script.js"></script>
+    </body>
+</html>
