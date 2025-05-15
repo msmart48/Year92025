@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href>
+</head>
+<body>
+    <h1>Timer</h1>
+    <div class="container">
+        <div id=timerOutput>0:00</div>
+        <button class="button is-success" onclick="startTimer()">Start
+            Timer</button>
+        <button class="button is-danger" onclick="stopTimer()">Stop
+            Timer</button>
+
+        <script>
+            const timerOutput = document.getElementById('timerOutput');
+            var seconds =0;
+            function startTimer() {
+                timerInterval = setInterval(updateTimer, 1000);
+
+            }
+            //increase the counter and update the output
+            function updateTimer() {
+                seconds++;
+                timerOutput.innerHTML = formatTime(seconds);
+            }
+            //stop the timer updating
+            function stopTimer() {
+                clearInterval(timerInterval);
+            }
+
+            function formatTime(seconds) {
+                var minutes = Math.floor(seconds / 60);
+                seconds = seconds % 60;
+                minutes = minutes % 60;
+                if (seconds < 10) {
+                    seconds = "0" + seconds;
+                }
+                if (minutes < 10) {
+                    minutes = "0" + minutes;
+                }
+                return  minutes + ":" + seconds;
+            }
+
+        </script>
+    </body>
+</html>
