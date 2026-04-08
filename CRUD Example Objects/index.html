@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <!-- bulma nav bar -->
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <strong>My App</strong>
+                </a>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="columns">
+                <div class="column is-one-third">
+                    <div class="box">
+                        <h1 class="title">Customers</h1>
+                        <p id="customerCount">0 customers</p>
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="box">
+                        <h1 class="title">Category 2</h1>
+                        <p>This is the second column.</p>
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="box">
+                        <h1 class="title">Category 3</h1>
+                        <p>This is the third column.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end of columns -->
+            <!-- form to add customers -->
+            <form id="customerForm">
+
+                <form class="box">
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input class="input" id="nameInput"
+                                type="text"
+                                placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input" id="emailInput"
+                                type="email"
+                                placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Phone</label>
+                        <div class="control">
+                            <input class="input" id="phoneInput"
+                                type="tel"
+                                placeholder="Phone">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Type</label>
+                        <div class="control">
+                            <select class="select" id="typeInput">
+                                <option value>Select a type</option>
+                                <option value="individual">Individual</option>
+                                <option value="business">Business</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- submit button -->
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-primary"
+                                type="submit">Add Customer</button>
+                        </div>
+                    </div>
+
+                </form>
+                <hr>
+                <input class="input" type="text" id="searchCustomerInput"
+                    placeholder="Search customers...">
+
+                <h2 class="title pt-3">Customer List</h2>
+                <button class="button is-link mb-3"
+                    id="sortCustomersButasc">Sort A-Z</button>
+                <button class="button is-link mb-3"
+                    id="sortCustomersButdesc">Sort Z-A</button>
+            </button>
+            <!-- table of customers -->
+
+            <table class="table is-striped is-fullwidth">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="customerTable">
+                    <!-- Customer rows will be added here dynamically -->
+                </tbody>
+            </table>
+
+        </div>
+        <!-- end of container -->
+        <script src="script.js"></script>
+
+    </body>
+</html>

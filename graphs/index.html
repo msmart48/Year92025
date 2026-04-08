@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <!-- bulma nav bar -->
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <strong>My App</strong>
+                </a>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="columns">
+                <!-- col 1 -->
+                <div class="column is-half">
+                    <div class="box">
+                        <h2 class="subtitle">Example Static Graph - Votes</h2>
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+                <!-- col 2 -->
+                <div class="column is-half">
+                    <div class="box">
+                        <h2 class="subtitle">Using Object Data Graph -
+                            Grade Band Results</h2>
+                        <canvas id="gradeChart"></canvas>
+                    </div>
+                </div>
+            </div> <!-- end of columns -->
+            <!-- 2nd row of columns -->
+            <div class="columns">
+                <!-- col 1 -->
+                <div class="column is-half">
+                    <div class="box">
+                        <h2 class="subtitle">Change Graph Type</h2>
+                        <select id="graphTypeSelect" class="input">
+                            <option value="bar">Bar</option>
+                            <option value="line">Line</option>
+                            <option value="pie">Pie</option>
+                            <option value="doughnut">Doughnut</option>
+                        </select>
+                    </div>
+
+                </div>
+                <!-- col 2 -->
+                <div class="column is-half">
+                    <div class="box">
+                        <h2 class="subtitle">Add more grades</h2>
+                        <input type="text" id="nameInput" class="input"
+                            placeholder="Name">
+                        <input type="number" id="pointsInput" class="input"
+                            placeholder="Points" min="0" max="100">
+                        <select id="gradeInput" class="input">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="F">F</option>
+                        </select>
+                        <button id="addGradeButton"
+                            class="button is-primary">Add Grade</button>
+                    </div>
+                </div>
+            </div> <!-- end of columns -->
+
+        </div> <!-- end of container -->
+        <script src="script.js"></script>
+
+    </body>
+</html>
