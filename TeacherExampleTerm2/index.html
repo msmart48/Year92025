@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Template</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    </head>
+    <body>
+        <!-- start the navbar -->
+        <nav class="navbar is-link" role="navigation"
+            aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <h1 class="title is-4 has-text-white">My App</h1>
+
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu"
+                    aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        Home
+                    </a>
+
+                    <a class="navbar-item">
+                        Instructions
+                    </a>
+
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- end the navbar -->
+        <!-- start the container -->
+        <div class="container">
+            <h1 class="title">My App Example</h1>
+            <!-- form area -->
+            <label class="label">Enter Player Name</label>
+            <div class="columns">
+                <div class="column is-two-thirds">
+                    <input id="nameInput" class="input" type="text"
+                        placeholder="Enter Name">
+                </div>
+                <div class="column">
+                    <button id="addNameButton" class="button is-primary">
+                        Add Name
+                    </button>
+                </div>
+            </div>
+            <!-- output area -->
+            <div id="nameListButtons">
+                <button class="button is-light">Mr Smart</button>
+                <button class="button is-light">Mr Smith</button>
+                <button class="button is-light">Mr Johnson</button>
+                <button class="button is-light">Mr Williams</button>
+            </div>
+            <h2 class="subtitle mt-2">Selected Player:<span id="selectName">
+                    None Selected</span></h2>
+            <hr>
+            <div class="columns">
+                <div class="column">
+                    <!-- output area - left column-->
+                    <div id="statControls">
+                        <p>Select Stat to add to player:</p>
+                        <button id="passButton"
+                            class="button is-success is-light">Pass
+                            +</button>
+                        <button id="serveButton"
+                            class="button is-success is-light">Serve
+                            +</button>
+                        <button id="digButton"
+                            class="button is-success is-light">Dig
+                            +</button>
+                    </div>
+                </div>
+                <!-- second colum show player summary -->
+                <div class="column">
+                    <div id="teamSummary">
+                        <h3 class="subtitle">Team Summary</h3>
+                        <p>Passes: <span id="passCount">0</span></p>
+                        <p>Serves: <span id="serveCount">0</span></p>
+                        <p>Digs: <span id="digCount">0</span></p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2 class="subtitle">Player Summary</h2>
+            <table class="table is-striped is-fullwidth">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Passes</th>
+                        <th>Serves</th>
+                        <th>Digs</th>
+                    </tr>
+                </thead>
+                <tbody id="playerSummaryTableBody">
+                </tbody>
+            </div> <!-- end the container -->
+
+            <script src="script.js"></script>
+        </body>
+    </html>
